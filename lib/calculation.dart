@@ -158,7 +158,7 @@ class _CalculationState extends State<Calculation> {
 
   String _getDisplayText() {
    //  if(result == 0.0) {
-      return result.toString();
+    //  return result.toString();
     // }
     // if (result != null) {
      // return '$result';
@@ -176,7 +176,7 @@ class _CalculationState extends State<Calculation> {
     //   return '$firstOperand';
     // }
 
-   // return '0';
+    return '0';
   }
 
 
