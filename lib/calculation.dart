@@ -87,27 +87,28 @@ class _CalculationState extends State<Calculation> {
   }
 
   numberPressed(int number) {
-    setState(() {
-      if (result != 0.0) {
-        result = 0.0;
-        firstOperand = number;
-        return;
-      }
-      if (firstOperand == null) {
-        firstOperand = number;
-        return;
-      }
-      if (operator == null) {
-        firstOperand = int.parse('$firstOperand$number');
-        return;
-      }
-      if (secondOperand == null) {
-        secondOperand = number;
-        return;
-      }
-
-      secondOperand = int.parse('$secondOperand$number');
-    });
+    print('OnTap');
+    // setState(() {
+    //   if (result != 0.0) {
+    //     result = 0.0;
+    //     firstOperand = number;
+    //     return;
+    //   }
+    //   if (firstOperand == null) {
+    //     firstOperand = number;
+    //     return;
+    //   }
+    //   if (operator == null) {
+    //     firstOperand = int.parse('$firstOperand$number');
+    //     return;
+    //   }
+    //   if (secondOperand == null) {
+    //     secondOperand = number;
+    //     return;
+    //   }
+    //
+    //   secondOperand = int.parse('$secondOperand$number');
+    // });
   }
 
   operatorPressed(String operator) {
@@ -234,6 +235,10 @@ class _CalculationState extends State<Calculation> {
 //   );
 // }
 
+
+int sum({required int a, required int b}){
+  return a + b;
+}
 
 
 
