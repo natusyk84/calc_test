@@ -180,59 +180,53 @@ class _CalculationState extends State<Calculation> {
   }
 
 
-  Widget _getButton(
-      {required String text,
-        required  onTap,
-        Color backgroundColor = Colors.white,
-        Color textColor = Colors.black}) {
+  Widget _getButton({required String text,  }
+      ) {
     return CalculatorButton(
       label: text,
-      onTap: onTap,
-      //() => {},//onTap,
-      size: 90,
       backgroundColor: backgroundColor,
-      labelColor: textColor,
+      labelColor: textColor, onTap: () {  },
     );
   }
 
 }
 
-// class ResultDisplay extends StatelessWidget {
-//   var text;
-//   late final double result;
-//
-//   ResultDisplay({required this.text, required this.result});
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//         alignment: Alignment.centerRight,
-//         padding: EdgeInsets.only(right: 24),
-//         width: double.infinity,
-//         height: 80,
-//         color: Colors.black,
-//         child: Text(
-//           text,
-//           style: TextStyle(color: Colors.white, fontSize: 34),
-//         ));
-//   }
-//
-// }
+class ResultDisplay extends StatelessWidget {
+  var text;
+  late final double result;
 
-// Widget _getButton(
-//     {required String text,
-//       required  onTap,
-//       Color backgroundColor = Colors.white,
-//       Color textColor = Colors.black}) {
-//   return CalculatorButton(
-//     label: text,
-//     onTap: onTap,
-//     //() => {},//onTap,
-//     size: 90,
-//     backgroundColor: backgroundColor,
-//     labelColor: textColor,
-//   );
-// }
+  ResultDisplay({required this.text, required this.result});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        alignment: Alignment.centerRight,
+        padding: EdgeInsets.only(right: 24),
+        width: double.infinity,
+        height: 80,
+        color: Colors.black,
+        child: Text(
+          text,
+          style: TextStyle(color: Colors.white, fontSize: 34),
+        ));
+  }
+
+}
+
+Widget _getButton(
+    {required String text,
+      required  onTap,
+      Color backgroundColor = Colors.white,
+      Color textColor = Colors.black}) {
+  return CalculatorButton(
+    label: text,
+    onTap: onTap,
+    //() => {},//onTap,
+    size: 90,
+    backgroundColor: backgroundColor,
+    labelColor: textColor,
+  );
+}
 
 
 
